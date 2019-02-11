@@ -1,5 +1,6 @@
+<!-- This is a form to edit a student -->
 <br/>
-
+<!-- We indicate which student is being edited through providing an andrew ID -->
 	<h3>
 		Edit Student <%= @student[0][0] %>
 	</h3>
@@ -7,6 +8,7 @@
 	<form role="form" action='https://first-test-bmulla.c9users.io/students/<%= @student[0][0] %>' method='post'>
 	<input type="hidden" name="_method" value="patch">
 
+<!-- Here we will have the input for each column, the original value will be inside the box for user's reference -->
 		<div class="form-group">
 					 
 			<label for="firstname">
