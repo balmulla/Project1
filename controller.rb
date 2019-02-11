@@ -8,6 +8,25 @@ end
 get '/students' do
    db = DBHandler.new
    @students = db.all
+   #This will help me determine how to filter the students, default is all which is all students
+   erb :application do
+      erb :index 
+   end
+end
+
+get '/students/g' do
+   db = DBHandler.new
+   @students = db.allg
+   #This will help me determine how to filter the students, default is all which is all students
+   erb :application do
+      erb :index 
+   end
+end
+
+get '/students/ce' do
+   db = DBHandler.new
+   @students = db.allce
+   #This will help me determine how to filter the students, default is all which is all students
    erb :application do
       erb :index 
    end

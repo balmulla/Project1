@@ -7,7 +7,7 @@
     <div class="row" >
 		<div class="col-md-9 bg-light">
 			<div class="row">
-                <p> <br/> &nbsp show <a href="/students/" >graduated</a>, <a  href="/students/" >not graduated</a>, <a href="/students/" >all</a></p>
+                <p> <br/> &nbsp show <a href="/students/g" >graduated</a>, <a  href="/students/ce" >Currently Enrolled</a>, <a href="/students" >all</a></p>
 			</div>
 		</div>
 		<div class="col-md-3 bg-light" align="center">
@@ -28,8 +28,9 @@
     </tr>
   </thead>
   <tbody>
+      
+<% @students.each do |andrewid, firstname, lastname, status| %> 
     <tr>
-<% @students.each do |andrewid, firstname, lastname, status| %>        
       <th scope="row"><a href="/students/<%= andrewid %>" class="text-dark"> <%= andrewid %></a></th>
       <td><%= firstname %></td>
       <td><%= lastname %></td>
@@ -38,5 +39,6 @@
       <td><a href = "/students/<%= andrewid %>/delete" class="btn btn-warning">delete</a></td>
     </tr>
     <% end %>
+
   </tbody>
 </table>

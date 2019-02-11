@@ -39,6 +39,34 @@ class DBHandler
         db.close if db
       end
    end   
+
+#for all graduated
+   def allg
+      begin
+        db = SQLite3::Database.open "students.db"
+        dbstatement = "SELECT AndrewID, FirstName, LastName, Status FROM students WHERE Status = 'Graduated';"
+        db.execute dbstatement
+      rescue SQLite3::Exception => e
+        puts "Exception Occurred"
+        puts e
+      ensure
+        db.close if db
+      end
+   end   
+
+#for all currently enrolled
+   def allce
+      begin
+        db = SQLite3::Database.open "students.db"
+        dbstatement = "SELECT AndrewID, FirstName, LastName, Status FROM students WHERE Status = 'Currently Enrolled';"
+        db.execute dbstatement
+      rescue SQLite3::Exception => e
+        puts "Exception Occurred"
+        puts e
+      ensure
+        db.close if db
+      end
+   end   
    
    def get(andrewid)
       begin
