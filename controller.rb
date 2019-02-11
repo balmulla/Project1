@@ -43,7 +43,7 @@ get '/students/:andrewid/edit' do
    end
 end
 
-patch '/foods/:andrewid' do
+patch '/students/:andrewid' do
    andrewid = params[:andrewid]
    db = DBHandler.new
    db.update(andrewid, params[:firstname], params[:lastname], params[:major], params[:email], params[:status])

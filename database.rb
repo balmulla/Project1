@@ -69,7 +69,7 @@ class DBHandler
    def destroy(andrewid)
       begin
         db = SQLite3::Database.open "students.db"
-        dbstatement = "DELETE FROM students WHERE id='#{andrewid}';"
+        dbstatement = "DELETE FROM students WHERE AndrewID='#{andrewid}';"
         db.execute dbstatement
       rescue SQLite3::Exception => e
         puts "Exception Occurred"
