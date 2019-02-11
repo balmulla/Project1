@@ -1,12 +1,27 @@
-<p>
+
+
+    
+
+    
+<div class="container-fluid">  
+    <div class="row" >
+		<div class="col-md-9 bg-light">
+			<div class="row">
+                <p> <br/> &nbsp show <a href="/students/" >graduated</a>, <a  href="/students/" >not graduated</a>, <a href="/students/" >all</a></p>
+			</div>
+		</div>
+		<div class="col-md-3 bg-light" align="center">
+		    <p><a href = "/students/new" class="btn  btn-secondary "  >Create New Student</a></p>
+		</div>
+    </div>
+</div>
+
     <table class="table">
   <thead>
     <tr>
       <th scope="col">Andrew ID</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
-
-
       <th scope="col">Status</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
@@ -19,12 +34,9 @@
       <td><%= firstname %></td>
       <td><%= lastname %></td>
       <td><%= status %></td>
-      <td><a href="/students/<%= andrewid %>/edit" class="btn btn-info">edit</a></td>
-      <td><a href = "/students/<%= andrewid %>/delete" class="btn btn-danger">delete</a></td>
+      <td><a href="/students/<%= andrewid %>/edit" class="btn btn-secondary">edit</a></td>
+      <td><a href = "/students/<%= andrewid %>/delete" class="btn btn-warning">delete</a></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-
-
-</p>

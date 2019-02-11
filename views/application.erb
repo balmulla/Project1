@@ -10,32 +10,46 @@
 
     <title>Students Records</title>
   </head>
-  <body>
+  <body class="bg-info">
+<div class="col-md-12 ">
+<br/> <br/> <br/> <br/> <br/>
+</div>
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-2">
+	<div class="row" >
+		<div class="col-md-2 ">
 		</div>
-		<div class="col-md-8">
-			<div class="page-header">
-				<h1>
-					Student Tracker
-				</h1>
+		<div class="col-md-8 bg-light">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="page-header">
+					    <br/>
+						<h1>
+						    
+							Student Tracker 
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 ">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 ">
+		</div>
+		<div class="col-md-8 bg-light">
+			<div class="row">
+				<div class="col-md-12">
+				    <%= yield %> 
+				</div>
 			</div>
 		</div>
 		<div class="col-md-2">
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-2">
-		</div>
-		<div class="col-md-8">
-         <%= yield %> 
-		</div>
-		<div class="col-md-2">
-		</div>
-	</div>
-</div> 
-			  
+</div>
+         
+	  
 			  
 
     <!-- Optional JavaScript -->
