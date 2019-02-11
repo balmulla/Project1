@@ -30,7 +30,7 @@ class DBHandler
    def all
       begin
         db = SQLite3::Database.open "students.db"
-        dbstatement = "SELECT * FROM students;"
+        dbstatement = "SELECT AndrewID, FirstName, LastName, Status FROM students;"
         db.execute dbstatement
       rescue SQLite3::Exception => e
         puts "Exception Occurred"
