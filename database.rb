@@ -17,7 +17,7 @@ class DBHandler
    def create(andrewid, firstname, lastname, major, email, status)
       begin
         db = SQLite3::Database.open "students.db"
-        dbstatement = "INSERT INTO students VALUES('#{andrewid}, #{firstname}, #{lastname}, #{major}, #{email}, #{status}');"
+        dbstatement = "INSERT INTO students VALUES('#{andrewid}', '#{firstname}', '#{lastname}', '#{major}', '#{email}', '#{status}');"
         db.execute dbstatement
       rescue SQLite3::Exception => e
         puts "Exception Occurred"
