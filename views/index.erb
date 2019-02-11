@@ -30,7 +30,7 @@
   <tbody>
     <tr>
 <% @students.each do |andrewid, firstname, lastname, status| %>        
-      <th scope="row"><%= andrewid %></th>
+      <th scope="row"><a href="/students/<%= andrewid %>" class="text-dark"> <%= andrewid %></a></th>
       <td><%= firstname %></td>
       <td><%= lastname %></td>
       <td><%= status %></td>
