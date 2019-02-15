@@ -46,7 +46,14 @@
 			<label for="status">
 				Status
 			</label>
-			<input type="text" class="form-control" id="status" name="status" value="<%= @student[0][5] %>" />
+			<select class="form-control" id="status" name="status" value="<%= @student[0][5] %>" >
+			  <option>Currently Enrolled</option>
+			  <% if @student[0][5] == "Graduated" %>
+              <option selected >Graduated</option>
+              <% else %>
+              <option >Graduated</option>
+              <% end %>
+            </select>
 		</div>
 		
 				<button type="submit" class="btn btn-secondary">
